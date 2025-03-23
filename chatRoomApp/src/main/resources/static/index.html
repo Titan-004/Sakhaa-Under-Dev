@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Preferred Name</title>
+
+    <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+    <script src="script.js"></script>
+
+
+</head>
+<body>
+
+<div  id="card" class="card text-center">
+    <h4 class="mb-3">What would you like to be called?</h4>
+    <div class="input-group">
+        <input type="text" id="nickname-input" class="form-control" placeholder="Enter your preferred name">
+        <button id="nickname-submit" class="btn btn-custom">Submit</button>
+    </div>
+</div>
+
+<!-- Chatroom Section -->
+<div id="chatroom" class="d-none">
+    <!-- Floating SVGs -->
+    <img src="penguin-svgrepo-com.svg" class="floating-svg penguin" alt="Penguin">
+    <img src="elk-svgrepo-com.svg" class="floating-svg elk" alt="Elk">
+
+    <div class="chat-card">
+        <h2 class="chat-title">Welcome to the Chatroom</h2>
+        <div class="chat-box" id="chat-box">
+            <p class="placeholder-text">Start chatting...</p>
+            <table id="message-table" ></table>
+        </div>
+        <div class="input-group mt-3">
+            <input type="text" id="message-input" class="form-control" placeholder="Type a message...">
+            <button id="send-btn" class="btn btn-success ml-2">Send</button>
+        </div>
+        <button id="leave-btn" class="btn btn-danger mt-3">Leave Chatroom</button>
+    </div>
+</div>
+
+
+</body>
+</html>

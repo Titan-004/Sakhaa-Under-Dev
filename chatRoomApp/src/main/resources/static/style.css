@@ -1,0 +1,236 @@
+/* General styling */
+body {
+    background-color: #d4edda; /* Light green */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Centered card */
+.card {
+    background-color: #c3e6cb; /* Soft green */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    animation: slideIn 1s ease-out;
+}
+
+/* Large animated heading */
+h4 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2d6a4f;
+    text-transform: uppercase;
+    animation: fadeIn 1.2s ease-in;
+}
+
+/* Input and button */
+.input-group {
+    display: flex;
+    align-items: center;
+    animation: slideIn 1.2s ease-out;
+}
+
+.input-group input {
+    flex: 1;
+    border: 2px solid #5aaf76;
+    padding: 10px;
+    border-radius: 6px 0 0 6px;
+}
+
+.input-group button {
+    background-color: #5aaf76;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 0 6px 6px 0;
+    transition: background 0.3s;
+}
+
+.input-group button:hover {
+    background-color: #4a9d66;
+}
+
+/* Floating SVGs */
+.penguin, .elk {
+    position: absolute;
+    width: 100px;
+    opacity: 0.8;
+}
+
+.penguin {
+    top: 10%;
+    left: 5%;
+    animation: float 4s infinite ease-in-out;
+}
+
+.elk {
+    bottom: 10%;
+    right: 5%;
+    animation: float 4s infinite ease-in-out;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+
+/* Chatroom Section */
+#chatroom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+/* Chat Card */
+.chat-card {
+    background: #c3e6cb;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Chat Title */
+.chat-title {
+    color: #2d6a4f;
+    font-size: 1.8rem;
+    font-weight: bold;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Dark-Themed Chat Box */
+.chat-box {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #1a1a1a;
+    color: white;
+
+
+    border-radius: 10px;
+}
+
+
+.chat-box::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-box::-webkit-scrollbar-track {
+    background: #333; /* Dark background */
+    border-radius: 10px;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+    background: #555; /* Medium-dark scrollbar */
+    border-radius: 10px;
+}
+
+.chat-box::-webkit-scrollbar-thumb:hover {
+    background: #777; /* Lighter on hover */
+}
+.shake-input {
+    border: 2px solid red;
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 80% { transform: translateX(-5px); }
+    40%, 60% { transform: translateX(5px); }
+}
+
+
+/* Placeholder Text */
+.placeholder-text {
+    color: #bbb;
+    font-style: italic;
+}
+
+/* Floating SVGs */
+.floating-svg {
+    position: absolute;
+    width: 100px;
+    opacity: 0.8;
+    animation: floatAnimation 4s infinite alternate ease-in-out;
+}
+
+.penguin {
+    top: 10%;
+    left: 5%;
+}
+
+.elk {
+    bottom: 10%;
+    right: 5%;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes floatAnimation {
+    from { transform: translateY(0); }
+    to { transform: translateY(10px); }
+}
+
+/* Leave Button */
+#leave-btn {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#leave-btn:hover {
+    background: #c82333;
+    transform: scale(1.05);
+}
+
+/* Chatroom Fade-Out Animation */
+@keyframes fadeOut {
+    from { opacity: 1; transform: scale(1); }
+    to { opacity: 0; transform: scale(0.8); }
+}
+
